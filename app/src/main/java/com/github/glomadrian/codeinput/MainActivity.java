@@ -21,6 +21,7 @@ import com.github.glomadrian.codeinputlib.callback.CodeInputCallback;
 public class MainActivity extends AppCompatActivity implements CodeInputCallback<CodeInput>{
 
     private CodeInput ci;
+    private CodeInputEditText mCit;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements CodeInputCallback
         ci=(CodeInput)findViewById(R.id.pairing);
         ci.setCodeInputListener(this);
 
-        CodeInputEditText mCit = (CodeInputEditText) findViewById(R.id.cit);
+        mCit = (CodeInputEditText) findViewById(R.id.cit);
         mCit.setCodeInputListener(new CodeInputCallback<CodeInputEditText>() {
             @Override
             public void onInputFinish(CodeInputEditText ci, String inputResult) {
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements CodeInputCallback
 
 
     public void getCodeInputEditText(View v){
-
+        Toast.makeText(MainActivity.this,mCit.getString(),Toast.LENGTH_LONG).show();
     }
 
     @Override
