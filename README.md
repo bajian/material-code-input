@@ -1,7 +1,12 @@
+ * updated by bajian
+ * 增加string 类型返回
+ * 优化个别代码性能,如attributes.recycle();等
+ * 增加CodeInputCallback<T> 监听onInputFinish和onInput
+ * 增加CodeInputEditText extends EditText 特性更多。比如可以很方便的时候et的特性，如maxLength，预输入..
+ * 增加使用例子
+
 Material Code input
 -----------------
-[![Download](https://api.bintray.com/packages/glomadrian/maven/MaterialCodeInput/images/download.svg) ](https://bintray.com/glomadrian/maven/MaterialCodeInput/_latestVersion)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Code%20Input-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2221)
 
 A material style input for put codes
 
@@ -47,6 +52,24 @@ Usage with custom colors and attributes
     />
 ```
 
+```
+
+  <com.github.glomadrian.codeinputlib.CodeInputEditText
+      android:id="@+id/cit"
+      android:layout_marginTop="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:underline_color="#03A9F4"
+      app:underline_selected_color="#3F51B5"
+      app:text_color="#212121"
+      app:hint_color="#03A9F4"
+      app:hint_text="CodeInputEditText"
+      app:codes="7"
+      android:maxLength="7"
+      />
+```
+
+
 Remember put this for custom attribute usage
 
 ```java
@@ -59,36 +82,19 @@ Get the input code (Returns a Character[])
 
 ```java
   codeInput.getCode()
+  
+  codeInput.getString()
 ```
-
-For Gradle
----------------------
-
-Add repository
-
-```java
-repositories {
-  maven {
-    url "http://dl.bintray.com/glomadrian/maven"
-  }
-}
-```
-Add dependency
-```java
-  compile 'com.github.glomadrian:CodeInput:1.1@aar'
-```
-
 
 Developed By
 ------------
+bajian - <313066164@qq.com>
 Adrián García Lomas - <glomadrian@gmail.com>
-* [Twitter](https://twitter.com/glomadrian)
-* [LinkedIn](https://es.linkedin.com/in/glomadrian )
 
 License
 -------
 
-    Copyright 2015 Adrián García Lomas
+    Copyright 2015 bajian
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
