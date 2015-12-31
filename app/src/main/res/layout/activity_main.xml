@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#FFF"
+    >
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <com.github.glomadrian.codeinputlib.CodeInput
+      android:layout_marginTop="20dp"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="wrap_content"
+      app:hint_text="Pairing code"
+      android:id="@+id/pairing"
+      />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="getCode"
+      android:text="获取值"/>
+</LinearLayout>
+
+  <com.github.glomadrian.codeinputlib.CodeInput
+      android:layout_marginTop="20dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:underline_color="#457ad1"
+      app:underline_selected_color="#9e1ace"
+      app:text_color="#b12eff"
+      app:hint_color="#77ce9d"
+      app:hint_text="Pin code"
+      app:codes="4"
+      />
+<!--
+  <com.github.glomadrian.codeinputlib.CodeInput
+      android:layout_marginTop="20dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:underline_color="#d19385"
+      app:underline_selected_color="#ce3a47"
+      app:text_color="#5c282c"
+      app:hint_color="#ce1087"
+      app:hint_text="Cheat code"
+      app:codes="8"
+      />-->
+<!--
+  <com.github.glomadrian.codeinputlib.CodeInput
+      android:layout_marginTop="20dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:underline_color="#03A9F4"
+      app:underline_selected_color="#3F51B5"
+      app:text_color="#212121"
+      app:hint_color="#03A9F4"
+      app:hint_text="Hash code"
+      app:codes="10"
+      />-->
+
+  <com.github.glomadrian.codeinputlib.CodeInputEditText
+      android:id="@+id/cit"
+      android:layout_marginTop="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:underline_color="#03A9F4"
+      app:underline_selected_color="#3F51B5"
+      app:text_color="#212121"
+      app:hint_color="#03A9F4"
+      app:hint_text="CodeInputEditText"
+      app:codes="7"
+      android:maxLength="7"
+      />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="getCodeInputEditText"
+    android:text="获取CodeInputEditText"/>
+
+</LinearLayout>

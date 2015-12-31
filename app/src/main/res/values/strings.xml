@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">CodeInput</string>
+  <string name="default_input">系统自带input</string>
+</resources>
