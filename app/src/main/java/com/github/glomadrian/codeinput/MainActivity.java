@@ -15,6 +15,7 @@ import com.github.glomadrian.codeinputlib.callback.CodeInputCallback;
  * 优化个别代码性能,如attributes.recycle();等
  * 增加CodeInputCallback<T> 监听onInputFinish和onInput
  * 增加CodeInputEditText extends EditText 特性更多。比如可以很方便的时候et的特性，如maxLength，预输入..
+ * 增加焦点获得 hint自动上升，而不是点击才上升，否则有bug
  * 增加使用例子
  */
 public class MainActivity extends AppCompatActivity implements CodeInputCallback<CodeInput>{

@@ -167,6 +167,14 @@ public class CodeInput extends View {
     private void initViewOptions() {
         setFocusable(true);
         setFocusableInTouchMode(true);
+        setOnFocusChangeListener(new OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (underlined && hasFocus) {
+                    startAnimation();
+                }
+            }
+        });
     }
 
     @Override
@@ -255,7 +263,7 @@ public class CodeInput extends View {
             return false;
         }
     }
-
+    
     /**
      * When a touch is detected the view need to focus and animate if is necessary
      */

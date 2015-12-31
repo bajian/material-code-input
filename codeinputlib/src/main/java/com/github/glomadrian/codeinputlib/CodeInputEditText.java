@@ -198,8 +198,6 @@ public class CodeInputEditText extends EditText{
             setMeasuredDimension(MinWidth, (int) viewHeight);
         }
 
-
-
     }
 
     private void initUnderline() {
