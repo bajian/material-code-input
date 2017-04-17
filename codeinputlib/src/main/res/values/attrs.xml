@@ -11,6 +11,8 @@
         format="color"/>
     <attr name="hint_text"
         format="string"/>
+    <attr name="displaying_char"
+        format="string"/>
     <attr name="codes"
         format="integer"/>
   </declare-styleable>

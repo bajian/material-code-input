@@ -26,8 +26,9 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:onClick="getCode"
-      android:text="获取值"/>
+      android:text="GET VALUE"/>
 </LinearLayout>
+
 
   <com.github.glomadrian.codeinputlib.CodeInput
       android:layout_marginTop="20dp"
@@ -40,6 +41,7 @@
       app:hint_text="Pin code"
       app:codes="4"
       />
+
 <!--
   <com.github.glomadrian.codeinputlib.CodeInput
       android:layout_marginTop="20dp"
@@ -65,24 +67,46 @@
       app:codes="10"
       />-->
 
+  <LinearLayout
+      android:orientation="horizontal"
+      android:gravity="bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <com.github.glomadrian.codeinputlib.CodeInputEditText
+        android:id="@+id/cit"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:underline_color="#03A9F4"
+        app:underline_selected_color="#3F51B5"
+        app:text_color="#212121"
+        app:hint_color="#03A9F4"
+        app:hint_text="CodeInputEditText"
+        app:codes="6"
+        android:maxLength="6"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getCodeInputEditText"
+        android:text="GET VALUE"/>
+  </LinearLayout>
+
   <com.github.glomadrian.codeinputlib.CodeInputEditText
-      android:id="@+id/cit"
-      android:layout_marginTop="20dp"
+      android:id="@+id/cit_pwd"
+      android:layout_marginTop="10dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:underline_color="#03A9F4"
       app:underline_selected_color="#3F51B5"
       app:text_color="#212121"
+      app:displaying_char="#"
       app:hint_color="#03A9F4"
-      app:hint_text="CodeInputEditText"
+      app:hint_text="CodeInputEditText Password"
       app:codes="7"
       android:maxLength="7"
       />
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="getCodeInputEditText"
-    android:text="获取CodeInputEditText"/>
-
 </LinearLayout>

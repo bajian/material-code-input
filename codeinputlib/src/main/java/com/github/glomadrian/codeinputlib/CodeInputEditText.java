@@ -55,6 +55,7 @@ public class CodeInputEditText extends EditText{
     private boolean underlined = true;
     private String hintText;
     private CodeInputCallback<CodeInputEditText> mCodeInputCallback;
+    private String displayingChar;
 
     public CodeInputEditText(Context context) {
         super(context);
@@ -111,6 +112,7 @@ public class CodeInputEditText extends EditText{
                 attributes.getColor(R.styleable.core_area_underline_selected_color, underlineSelectedColor);
         hintColor = attributes.getColor(R.styleable.core_area_underline_color, hintColor);
         hintText = attributes.getString(R.styleable.core_area_hint_text);
+        displayingChar = attributes.getString(R.styleable.core_area_displaying_char);
         underlineAmount = attributes.getInt(R.styleable.core_area_codes, underlineAmount);
         textColor = attributes.getInt(R.styleable.core_area_text_color, textColor);
 
@@ -299,7 +301,8 @@ public class CodeInputEditText extends EditText{
         float actualWidth = toX - fromX;
         float centerWidth = actualWidth / 2;
         float centerX = fromX + centerWidth;
-        canvas.drawText(character.toString(), centerX, height - textMarginBottom, textPaint);
+        String mChar=null!=displayingChar?displayingChar:character.toString();
+        canvas.drawText(mChar, centerX, height - textMarginBottom, textPaint);
     }
 
     private void drawHint(Canvas canvas) {
